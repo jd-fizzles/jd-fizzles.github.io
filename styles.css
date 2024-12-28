@@ -411,6 +411,10 @@ body {
   }
 }
 
+.highlight {
+    border-bottom: 0.25rem solid #CC8A66;
+}
+
 .contactWrapper {
   position: absolute;
   top: 50%;
