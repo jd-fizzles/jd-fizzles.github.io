@@ -1,6 +1,6 @@
 const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
-const navLogo = document.querySelector('#navbar__logo');
+const menuLinks = document.querySelector('.navbarMenu');
+const navLogo = document.querySelector('#eyLogo');
 
 // Display Mobile Menu
 const mobileMenu = () => {
@@ -28,7 +28,7 @@ const highlightMenu = () => {
     } else if (window.innerWidth > 960 && scrollPos < 1400) {
         aboutMenu.classList.add('highlight');
         homeMenu.classList.remove('highlight');
-        servicesMenu.classList.remove('highlight')
+        servicesMenu.classList.remove('highlight');
         return;
     } else if (window.innerWidth > 960 && scrollPos < 2345) {
         servicesMenu.classList.add('highlight');
@@ -56,3 +56,22 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+
+const signup = document.querySelector('#contactButton');
+const signupForm = document.querySelector('#signup__form');
+const closeForm = document.querySelector('#signup__close');
+
+// Newsletter Signup functionality
+const popOpen = () => {
+    signupForm.style.visibility = 'visible';
+    signupForm.classList.add('active');
+}
+
+const popClose = () => {
+    signupForm.style.visibility = 'hidden';
+    signupForm.classList.remove('active');
+}
+
+closeForm.addEventListener('click', popClose);
+signup.addEventListener('click', popOpen);
